@@ -399,3 +399,103 @@ td a:hover {
         padding: 12px;
     }
 }
+
+/* Support Section */
+.support-info {
+    background: var(--light);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.support-info h3 {
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.support-info h4 {
+    color: var(--dark);
+    margin: 1.5rem 0 1rem;
+    font-size: 1.1rem;
+}
+
+.support-emails {
+    display: grid;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.support-item {
+    padding: 1rem;
+    background: white;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary);
+}
+
+.support-item strong {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--dark);
+}
+
+.support-item a {
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.support-item a:hover {
+    text-decoration: underline;
+}
+
+.support-guidelines {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 1.5rem;
+}
+
+.support-guidelines ul {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+}
+
+.support-guidelines li {
+    margin: 0.5rem 0;
+    color: var(--text);
+}
+
+.urgent-note {
+    background: #fff3cd;
+    border-left: 4px solid #ffc107;
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 4px;
+}
+
+.support-includes {
+    background: var(--primary);
+    color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    margin-top: 2rem;
+}
+
+.support-includes h3 {
+    color: white;
+    margin-bottom: 1.5rem;
+}
+
+.support-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.support-feature {
+    padding: 0.75rem 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    font-weight: 500;
+}
