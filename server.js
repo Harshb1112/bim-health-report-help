@@ -4,8 +4,8 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-// Serve static files
-app.use(express.static('public'));
+// Serve static files from public directory
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Main help page route
 app.get('/', (req, res) => {
@@ -22,7 +22,12 @@ app.get('/api/version', (req, res) => {
 });
 
 // Start server
-app.listen(PORT, () => {
-  console.log(`🚀 BIM Health Report Help Server running on port ${PORT}`);
-  console.log(`📖 Open http://localhost:${PORT} in your browser`);
-});
+if (process.env.NODE_ENV !== 'production') {
+  app.listen(PORT, () => {
+    console.log(`🚀 BIM Health Report Help Server running on port ${PORT}`);
+    console.log(`📖 Open http://localhost:${PORT} in your browser`);
+  });
+}
+
+// Export for Vercel
+module.exports = app;
